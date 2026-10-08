@@ -1,0 +1,17 @@
+{
+  "name": "adapta-cliente-modular",
+  "owner": {
+    "name": "Adapta Labs"
+  },
+  "metadata": {
+    "description": "Marketplace do plugin do cliente Adapta Native, com SkillMind e perfil portátil para o ETHOS sem hooks.",
+    "version": "0.4.0-pilot.1"
+  },
+  "plugins": [
+    {
+      "name": "adapta-cliente-modular",
+      "source": "./adapta-cliente",
+      "description": "Contrato modular com co-design e gates; piloto."
+    }
+  ]
+}

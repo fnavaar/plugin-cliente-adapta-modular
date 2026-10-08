@@ -1,0 +1,8 @@
+{
+  "name": "adapta-cliente-modular",
+  "description": "Cliente vinculado ao contrato Adapta Modular 1.0.0: co-design, incremento, provas e gates.",
+  "version": "0.4.0-pilot.1",
+  "author": {
+    "name": "Adapta Labs"
+  }
+}

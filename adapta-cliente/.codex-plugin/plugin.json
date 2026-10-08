@@ -1,0 +1,33 @@
+{
+  "name": "adapta-cliente-modular",
+  "version": "0.4.0-pilot.1",
+  "description": "Cliente vinculado ao contrato Adapta Modular 1.0.0: co-design, incremento, provas e gates.",
+  "author": {
+    "name": "Adapta Labs"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "adapta",
+    "modular",
+    "ethos",
+    "champion"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Adapta Cliente Modular",
+    "shortDescription": "Contexto, funcoes e provas por modulo.",
+    "longDescription": "Cliente vinculado ao contrato Adapta Modular 1.0.0: co-design, incremento, provas e gates.",
+    "developerName": "Adapta Labs",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Usar skill-mind-cliente com pacote Adapta Modular 1.0.0 autorizado."
+    ],
+    "brandColor": "#2563EB",
+    "screenshots": []
+  }
+}

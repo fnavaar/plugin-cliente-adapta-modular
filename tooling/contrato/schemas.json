@@ -1,0 +1,726 @@
+{
+  "project": {
+    "type": "object",
+    "properties": {
+      "contract_id": {
+        "const": "adapta-modular"
+      },
+      "contract_version": {
+        "const": "1.0.0"
+      },
+      "client_id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "client_name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "context_repo": {
+        "type": "string",
+        "minLength": 1
+      },
+      "champion": {
+        "type": "string",
+        "minLength": 1
+      },
+      "phase": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      },
+      "context_visibility": {
+        "const": "operacional_integral_autorizado"
+      },
+      "environment": {
+        "type": "object",
+        "properties": {
+          "platform": {
+            "const": "Skip/SkipCloud"
+          },
+          "declared_project_id": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "verified_project_id": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "code_repo": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "code_commit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "preview_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "platform",
+          "declared_project_id",
+          "verified_project_id",
+          "code_repo",
+          "code_commit",
+          "preview_version"
+        ],
+        "additionalProperties": false
+      },
+      "context_files": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "phases": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "phase": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "result": {
+              "type": "string",
+              "minLength": 1
+            },
+            "kind": {
+              "enum": [
+                "systems",
+                "loops",
+                "validation"
+              ]
+            }
+          },
+          "required": [
+            "phase",
+            "result",
+            "kind"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "contract_id",
+      "contract_version",
+      "client_id",
+      "client_name",
+      "context_repo",
+      "champion",
+      "phase",
+      "context_visibility",
+      "environment",
+      "context_files",
+      "phases"
+    ],
+    "additionalProperties": false
+  },
+  "modules": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "source",
+                  "decision",
+                  "hypothesis"
+                ]
+              },
+              "ref": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "ref"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "content_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "criteria_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "id",
+        "phase",
+        "title",
+        "result",
+        "limits",
+        "source_refs",
+        "content_path",
+        "criteria_ids"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "criteria": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "module_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proof_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_spec": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_required": {
+          "type": "string",
+          "minLength": 1
+        },
+        "criticality": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "module_id",
+        "expected",
+        "proof_id",
+        "source_spec",
+        "evidence_required",
+        "criticality"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "functions": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "module_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "enum": [
+            "proposta",
+            "confirmada"
+          ]
+        },
+        "actor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "need": {
+          "type": "string",
+          "minLength": 1
+        },
+        "behavior": {
+          "type": "string",
+          "minLength": 1
+        },
+        "journey": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "ui_states": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "source",
+                  "decision",
+                  "hypothesis"
+                ]
+              },
+              "ref": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "ref"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "criteria_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "confirmed_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confirmed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "scenario": {
+                "type": "string",
+                "minLength": 1
+              },
+              "expected": {
+                "type": "string",
+                "minLength": 1
+              },
+              "proof": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "scenario",
+              "expected",
+              "proof"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "module_id",
+        "version",
+        "status",
+        "actor",
+        "need",
+        "behavior",
+        "journey",
+        "ui_states",
+        "limits",
+        "source_refs",
+        "criteria_ids",
+        "questions",
+        "confirmed_by",
+        "confirmed_at",
+        "checks"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "state": {
+    "type": "object",
+    "properties": {
+      "contract_version": {
+        "const": "1.0.0"
+      },
+      "client_id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "phase": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5
+      },
+      "module_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "function_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "increment_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "stage": {
+        "enum": [
+          "entendendo_contexto",
+          "explorando_necessidade",
+          "desenhando_funcao",
+          "desenhando_interface",
+          "aguardando_autorizacao",
+          "implementando",
+          "verificando",
+          "aguardando_teste_humano",
+          "em_correcao",
+          "incremento_concluido"
+        ]
+      },
+      "context_commit": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "code_commit": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "runtime_version": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "authorization": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "increment_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "function_version": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "by": {
+                "type": "string",
+                "minLength": 1
+              },
+              "at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "message_ref": {
+                "type": "string",
+                "minLength": 1
+              },
+              "scope": {
+                "type": "string",
+                "minLength": 1
+              },
+              "plan_presented_at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "plan_message_ref": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "increment_id",
+              "function_version",
+              "by",
+              "at",
+              "message_ref",
+              "scope",
+              "plan_presented_at",
+              "plan_message_ref"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "human_test": {
+        "type": "object",
+        "properties": {
+          "result": {
+            "enum": [
+              "pendente",
+              "aprovado",
+              "falhou"
+            ]
+          },
+          "by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "message_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "tested_increment_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "result",
+          "by",
+          "at",
+          "message_ref",
+          "tested_increment_id"
+        ],
+        "additionalProperties": false
+      },
+      "evidence": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "criterion_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "result": {
+              "enum": [
+                "pass",
+                "fail",
+                "insufficient"
+              ]
+            },
+            "path": {
+              "type": "string",
+              "minLength": 1
+            },
+            "action": {
+              "type": "string",
+              "minLength": 1
+            },
+            "code_commit": {
+              "type": "string",
+              "minLength": 1
+            },
+            "runtime_version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "at": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          },
+          "required": [
+            "criterion_id",
+            "result",
+            "path",
+            "action",
+            "code_commit",
+            "runtime_version",
+            "at",
+            "sha256"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "pending_changes": {
+        "type": "string",
+        "minLength": 1
+      },
+      "next_action": {
+        "type": "string",
+        "minLength": 1
+      },
+      "updated_at": {
+        "type": "string",
+        "minLength": 1
+      },
+      "learning": {
+        "enum": [
+          "pendente",
+          "capturado",
+          "sem_sinal"
+        ]
+      }
+    },
+    "required": [
+      "contract_version",
+      "client_id",
+      "phase",
+      "module_id",
+      "function_id",
+      "increment_id",
+      "stage",
+      "context_commit",
+      "code_commit",
+      "runtime_version",
+      "authorization",
+      "human_test",
+      "evidence",
+      "pending_changes",
+      "next_action",
+      "updated_at",
+      "learning"
+    ],
+    "additionalProperties": false
+  },
+  "decisions": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "confirmed",
+            "proposed",
+            "historical"
+          ]
+        },
+        "by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "status",
+        "by",
+        "at",
+        "statement",
+        "source_ref",
+        "scope"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

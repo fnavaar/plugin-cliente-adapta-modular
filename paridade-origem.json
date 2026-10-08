@@ -1,0 +1,172 @@
+{
+  "source_commit": "36154ba2406a251a930171ad50c3a3bf3dd93493",
+  "all_26_paths_preserved": true,
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "status": "adaptado",
+      "old_sha256": "a36093054db58ea4fccee17afe2a8d7c4589305727b8e3beed66257b3e32676c",
+      "new_sha256": "a5afbf684331e25ad618887f2d9184d0d2799e9cad3fdfb3f19dab44a2fcba5c"
+    },
+    {
+      "path": ".gitattributes",
+      "status": "mantido-byte-exato",
+      "old_sha256": "6e765d7bc7767736119a39e55e9b59afc49138948070949766ce2a17260f4846",
+      "new_sha256": "6e765d7bc7767736119a39e55e9b59afc49138948070949766ce2a17260f4846"
+    },
+    {
+      "path": ".gitignore",
+      "status": "mantido-byte-exato",
+      "old_sha256": "6365ed8a9728cd6ce8422dcca1e3d97c749b661179c264bd76413cd5b51beae1",
+      "new_sha256": "6365ed8a9728cd6ce8422dcca1e3d97c749b661179c264bd76413cd5b51beae1"
+    },
+    {
+      "path": "README.md",
+      "status": "adaptado",
+      "old_sha256": "3e5183db19061690dd8f5942b42b47c2a30cb2c917093d45536064dd35289277",
+      "new_sha256": "06af29d62f57d39126647255e3485b0e9eb987b520b2a744f18ec1dfc3f1a507"
+    },
+    {
+      "path": "adapta-cliente/.claude-plugin/plugin.json",
+      "status": "adaptado",
+      "old_sha256": "e4e43528e17f53ecb112841807a9afc2848d8f13ab66985ab51087e479f77a90",
+      "new_sha256": "d9a5b495a559ed164540c0344eca98f2d7b3ceccc74ecbc175a993786ad64580"
+    },
+    {
+      "path": "adapta-cliente/.claude/commands/adapta-cliente/destravar-task.md",
+      "status": "adaptado",
+      "old_sha256": "9e6360d30e16d0f43027682caead9f2e2d2efe23e678a7f6047f07d880e0a006",
+      "new_sha256": "7c53b3a78fc13e18c73b8b83f10e5aa840309247b037c4d105e23cdf5dc13b49"
+    },
+    {
+      "path": "adapta-cliente/.claude/commands/adapta-cliente/finalizar-task.md",
+      "status": "adaptado",
+      "old_sha256": "c96c97e7908095a5bc927876b3bc0c41f673acadab968c5a524f5b1199475aa3",
+      "new_sha256": "e3f23e375763633b3ceae62448421048abc2cb5b12e46fd6a9ab1560d721ddeb"
+    },
+    {
+      "path": "adapta-cliente/.claude/commands/adapta-cliente/skill-mind.md",
+      "status": "adaptado",
+      "old_sha256": "20e16f4b2ac1410aee39a8a16d7d874a692e01e9318c626083869d3a4d892043",
+      "new_sha256": "7282d3e0b34a72a91249ef39aaff9cbc7e00c36acd619a39ff298ff4c6fd9965"
+    },
+    {
+      "path": "adapta-cliente/.claude/commands/adapta-cliente/trabalhar.md",
+      "status": "adaptado",
+      "old_sha256": "b25c75596c4f021ed28a7f889fbe2c709f31ce53ad1dc22a983d813cd5f9c195",
+      "new_sha256": "c7f01f01376f681e568ae888380d2ab77f47202504ee6f5b08d999c88062497c"
+    },
+    {
+      "path": "adapta-cliente/.codex-plugin/plugin.json",
+      "status": "adaptado",
+      "old_sha256": "7048d680b75c594812836a85cf7dc9ec1adaf2f25c4a4de4879eab6480ee1323",
+      "new_sha256": "aac44085763d5757bbf30eb6c077be266abd0cf4037441ee05b17e7116058cd8"
+    },
+    {
+      "path": "adapta-cliente/MEMORY.md",
+      "status": "adaptado",
+      "old_sha256": "6238d8970914657046c8493d6f63629e0150505660977149a337fadcb65599f5",
+      "new_sha256": "94166085574d199d9bf29f8673665fe68bea66592a23254f3d24fe2c2167e199"
+    },
+    {
+      "path": "adapta-cliente/agents/verificador-de-entrega.md",
+      "status": "adaptado",
+      "old_sha256": "feef19bda2aa649d5c19cbbed936e7cd51ee7db5671a81d24ca9c12bc76639af",
+      "new_sha256": "eaa91f2b6d55fe008fecba217489e6f7de3787153f4b902433c8d966de9539f5"
+    },
+    {
+      "path": "adapta-cliente/hooks/hooks.json",
+      "status": "adaptado",
+      "old_sha256": "891e3935fa2741613fcfb1f8b0d55f4e2c94f2bb89a4bf170544acc9c88ade68",
+      "new_sha256": "e7f14f26a05e21fdd52de352ae60e197d29a1b45d6f9fb3a3ea867901853fa66"
+    },
+    {
+      "path": "adapta-cliente/hooks/scripts/guarda-seguranca.sh",
+      "status": "mantido-byte-exato",
+      "old_sha256": "1da74565fae899a9a28cf58c71c926a8a1591243a5e292e489ca7d5810866ed3",
+      "new_sha256": "1da74565fae899a9a28cf58c71c926a8a1591243a5e292e489ca7d5810866ed3"
+    },
+    {
+      "path": "adapta-cliente/hooks/scripts/session-start.sh",
+      "status": "adaptado",
+      "old_sha256": "8e767161f9dbaf7a48196485cb30a4cdadd213a592f9453456c835674e11d3a6",
+      "new_sha256": "ad5752c9053cd0933ba02f1c775f4dabd8fc47abb3460968a865a8cdd4601f50"
+    },
+    {
+      "path": "adapta-cliente/hooks/scripts/sync-github.sh",
+      "status": "adaptado",
+      "old_sha256": "1fac6e8aede674f353c8dc82be21ad5fb7db75c949fa03913ca17d11135fe1fc",
+      "new_sha256": "e604912766423c865a592cd2428f82d2d6b07c182f48751d6001e47a23ec2e12"
+    },
+    {
+      "path": "adapta-cliente/personas/agente-cliente.md",
+      "status": "adaptado",
+      "old_sha256": "bdfa275b82bc9f1767590d7043b58957bd6edfe363075c7c69767d890244f6ed",
+      "new_sha256": "f977783121e63050b6e42a7bf19aae5611ec0a1866f5efac83f767e69a414ca6"
+    },
+    {
+      "path": "adapta-cliente/skills/aprendizado-continuo/SKILL.md",
+      "status": "adaptado",
+      "old_sha256": "614d734165d8f7d78df2cb194e5c6ca789a3dccee490f89edc8de5d00b051ec1",
+      "new_sha256": "2216728c1010ebe6f40cf93890a0259097bd6546ac5da7e74a4862f46728c74c"
+    },
+    {
+      "path": "adapta-cliente/skills/concluir-task/SKILL.md",
+      "status": "adaptado",
+      "old_sha256": "a02b65e5f4e0ff7d7e69ffe33883f9b0b25d35770efd3ee2173ce7ffca74916e",
+      "new_sha256": "8b0e0a8f60ca87888e0c841da9eaec2b6699d3413b38a62f4671b6be2bf61f4c"
+    },
+    {
+      "path": "adapta-cliente/skills/debug-task/SKILL.md",
+      "status": "adaptado",
+      "old_sha256": "13b21656be0b1e70bf5364bb2713214c0afd4f60dd9d3c2a28f5b82772e1ac5e",
+      "new_sha256": "b7de8ff4b74d186751ea7f8fa8b54953a5d5a6eb81788c4c01b367ed3f74d364"
+    },
+    {
+      "path": "adapta-cliente/skills/executar-task/SKILL.md",
+      "status": "adaptado",
+      "old_sha256": "17653029da25d9a3895b3c04ab307b88d6767d7c2c6565b0be49cd5467b410d0",
+      "new_sha256": "6acde322e6c5f5bb68bff6a4b1f0715087e6089fa33d303110d51ec3083a237e"
+    },
+    {
+      "path": "adapta-cliente/skills/proxima-task/SKILL.md",
+      "status": "adaptado",
+      "old_sha256": "13f2d46fd67d9eb7444fc4f2e3f2892e12d7e1194593e422cf21eed062d7ad36",
+      "new_sha256": "7f7a2827d732b05006e8b0f0282aa19a8004b4c667bcb29d0063be7dad409159"
+    },
+    {
+      "path": "adapta-cliente/skills/skill-mind-cliente/SKILL.md",
+      "status": "adaptado",
+      "old_sha256": "8f30677d58ff9a83b56d968cb0bab3866d449fec50204ebbd749d355413f3760",
+      "new_sha256": "77401999e1ca5e1618184bab8ed9cd4aa8a97991b04c94ba250b1ece935405df"
+    },
+    {
+      "path": "adapta-cliente/skills/status/SKILL.md",
+      "status": "adaptado",
+      "old_sha256": "0b89f99e34393d010e71eb9ba492f408dc612195eec3f65c9e8c1f1a596cb1bb",
+      "new_sha256": "3c1b16a45fc4c0e06c48afa9400f8ff03aa2f033035ceed4c0d303122ec191d8"
+    },
+    {
+      "path": "adapta-cliente/tests/plugin-ethos.test.mjs",
+      "status": "adaptado",
+      "old_sha256": "3c03fe397e6c4df4193a91e865e82744aa23106b058162ccd284e30196660281",
+      "new_sha256": "a008ddbeec7a327f776248570bbb925705c00fb0e8fdd7ed211d8b2360840c17"
+    },
+    {
+      "path": "package.json",
+      "status": "adaptado",
+      "old_sha256": "4cadf88cc75931e6329042530e5dc2e223d1058384d68ba43487e48a204b1afd",
+      "new_sha256": "7fa02eb07d058e95fdac45b49d1db426f6d1a739167a0b8329255bcd2ba7e8b5"
+    }
+  ],
+  "added": [
+    "adapta-cliente/contrato/LEIA-ME.md",
+    "adapta-cliente/contrato/contrato.json",
+    "adapta-cliente/contrato/schemas.json",
+    "adapta-cliente/skills/comparar-modulo/SKILL.md",
+    "adapta-cliente/skills/desenhar-funcao/SKILL.md",
+    "adapta-cliente/skills/desenhar-interface/SKILL.md",
+    "adapta-cliente/skills/entender-contexto/SKILL.md",
+    "adapta-cliente/skills/explorar-necessidade/SKILL.md"
+  ]
+}
